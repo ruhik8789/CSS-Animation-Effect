@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gilroy;
+}
+html, 
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #161212;
+    color: #fff;
+}
+h1 {
+    font-size: 100px;
+    position: relative;
+}
+h1::after {
+    content: "";
+    position: absolute;
+    width: 0px;
+    bottom: 0;
+    color: #fff;
+    height: 5px;
+    right: 0;
+    background-color: #fff;
+}
+h1:hover::after {
+    animation-name: line;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes line {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
